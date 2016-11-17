@@ -16,6 +16,10 @@ This role gave me a taste for what real software development was all about. I wa
 
 10 years later I was still with company having progressed through various positions from Junior Programmer to Lead Developer / Solutions Architect. My core skill set throughout this time was predominantly database focused. I worked with SQL Server from a business / management information perspective before moving onto Oracle developing the core business application supporting the quoting, sales and accounting of Insurance transactions.
 
-In the final few years I was involved in the design and implementation of the companies online presence creating a "Quote & Buy" site using Java/JSF and subsequently integrating with 3rd party insurance aggregators.
+In the final few years I was involved the support and maintenance of the company's Java based online "Quote & Buy" website and subsequently the integration of the quoting engine with 3rd party insurance aggregators.
 
-Towards the end of my time with the company my role became less hands-on which ultimately triggered my decision to make a move. Whilst I found the Solutions Architecture side of software development very interesting and valuable (particularly DDD) the role helped me realise that writing code is ultimately what motivates me. I enjoy the design process but then being able to implement that design and solve problems with code is what gives me a buzz.
+Towards the end of my time with the company my role became less hands-on which ultimately triggered my decision to make a move. Whilst I found the Solutions Architecture side of things very interesting and valuable (particularly DDD) the role helped me realise that writing code is ultimately what motivates me. I enjoy the design process but then being able follow that up with the implementation is what gives me a buzz.
+
+With the core of my experience being Oracle based I started looking for a more development focused role in that area and soon found a suitable opportunity with a software house providing services to the rail industry. This began as a run of the mill Oracle developer role but around 6 months I was asked to get involved with a Java based application that integrated a "backend" system with a 3rd party mobile offering. At this point my Java knowledge was limited but I decided it was essential to approach this new opportunity in the right way so started diving deeper into Java and Object Oriented programming.
+
+A few years later and Java is at the core of everything I do now. 
