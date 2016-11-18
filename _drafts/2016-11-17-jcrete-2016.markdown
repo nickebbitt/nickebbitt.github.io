@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "JCrete 2016"
+date:   2016-11-17 00:00:00
+categories: java
+---
+In late 2015 I arranged for Heinz Kabutz (Java Champion and the man behind [javaspecialists.eu](http://javaspecialists.eu/) to visit the company I work for and teach his Java Specialist Master course to my team.
+
+The training was great but a nice bonus for myself was a personal invite from Heinz to attend the Java focused [JCrete Unconference](http://www.jcrete.org/) he runs on the Greek island of, you guessed it, Crete.
+
+![image-title-here](/images/jCreteUnconf.svg){:class="img-responsive"}
