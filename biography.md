@@ -22,6 +22,6 @@ Towards the end of my time with the company my role became less hands-on which u
 
 With the core of my experience being Oracle based I started looking for a more development focused role in that area and soon found a suitable opportunity with a software house providing services to the rail industry. This began as a run of the mill Oracle developer role but around 6 months I was asked to get involved with a Java based application that integrated a "backend" system with a 3rd party mobile offering.
 
-At this point I realised that the Java knowledge I already had was limited and my understanding of Object Oriented concepts and design patterns was fairly basic. I decided it was essential to approach this new opportunity in the right way so started diving deeper into Java and Object Oriented design, as well general best practices in relation to development such as automated testing techniques and automation.
+At this point I realised that the Java knowledge I already had was limited and my understanding of Object Oriented concepts and design patterns was fairly basic. I decided it was essential to approach this new opportunity in the right way so started diving deeper into Java and Object Oriented design, as well general best practices in relation to development such as clean code and automated testing.
 
 A few years later and Java is at the core of everything I do now.
