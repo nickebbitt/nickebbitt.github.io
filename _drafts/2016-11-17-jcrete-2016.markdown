@@ -4,7 +4,7 @@ title:  "JCrete 2016"
 date:   2016-11-17 00:00:00
 categories: java
 ---
-In late 2015 I arranged for Heinz Kabutz (Java Champion and the man behind [javaspecialists.eu](http://javaspecialists.eu/) to visit the company I work for and teach his Java Specialist Master course to my team.
+In late 2015 I arranged for Heinz Kabutz (Java Champion and the man behind [javaspecialists.eu](http://javaspecialists.eu/)) to visit the company I work for and teach his Java Specialist Master course to my team.
 
 The training was great but a nice bonus for myself was a personal invite from Heinz to attend the Java focused [JCrete Unconference](http://www.jcrete.org/) he runs on the Greek island of, you guessed it, Crete.
 
@@ -14,8 +14,50 @@ The invite put me into the hat to attend the unconference and I was luck to be o
 
 It turned out to be a great decision and one of the most, if not the most, rewarding weeks of my career.
 
-Arriving in Kolymbari a day before the conference started I decided to take a stroll down the sea front. I was passing the strip of restaurants and heard the mention of GlassFish from one of the tables. With a Java conference happening in the same town the coming week I knew this was no coincidence so approached the table and asked "Did someone just say GlassFish?". Luckily they had and I didn't look daft. The Java people in question were actually members of the Netbeans dream team, Zoran Sevarac, Toni Epple and Geertan Wielenga. Interestingly the reason they were talking about GlassFish was actually nothing to do with Java, but rather [Jazz harmonica album created by Geertan's partner] (http://www.herminedeurloo.com/cds/glass-fish/).
+As the conference grew nearer the thought of joining up with so many talented people from the Java community was quite daunting. I believe at least 20% of attendees were Java Champions and many had made very important contributions to the Java ecosystem. I needn't have worried about this though.
 
-Following the fortunate meetup Zoran, Toni and I decided to sample a few local "Cocktails on the Rocks!". This set the scene for the coming week - the friendliness from these people I'd only just met was superb.
+The setting for the conference was the Orthodox Academy of Crete (OAC) located in a small fishing village called Kolymbari on the north coast of the island. Most attendees stayed at the OAC, as well as it hosting the majority of the conference sessions (more on that later).
+
+![The OAC in the distance...](/images/the_oac.png){:class="img-responsive"}
+
+I arrived in Kolymbari a day before the conference started so decided to acclimatise to the heat to take a stroll down the sea front. I was passing the strip of restaurants and heard the mention of GlassFish from one of the tables. With a Java conference happening in the same town I knew this was no coincidence so approached the table and asked "Did someone just say GlassFish?". Luckily they had and I didn't look daft. The Java people in question were actually members of the Netbeans dream team, Zoran Sevarac, Toni Epple and Geertan Wielenga. Interestingly the reason they were talking about GlassFish was actually nothing to do with Java, but rather [Jazz harmonica album created by Geertan's partner] (http://www.herminedeurloo.com/cds/glass-fish/) (who is amazing by the way).
+
+Following the fortunate meetup Zoran, Toni and I decided to sample a few local "Cocktails on the Rocks!". This set the scene for the coming week - the friendliness from these people I'd only just met was superb and the laughs pretty much started here and continued throughout.
 
 ![Cocktails on the Rocks!](/images/cocktails_on_the_rocks.png){:class="img-responsive"}
+
+The day before the conference started for real quite a few people had already arrived so we all pitched in helping to set up the various rooms at the OAC for the sessions to come. The rooms (or spaces) were all given names such as "The Stage", "The Library", "The Printing Room" and "The Lounge". There were also some more informal breakout areas such as "The Beach" and "Under the Vines". Most importantly we also received our well travelled JCrete towels to use on any excursions to the beach to dry off after any sea based discussions we were involved in.
+
+On the first day proper of the conference 80 or so of us gathered in the main room at the OAC. Heinz and co set the scene for the week giving us an idea of what to expect.
+
+![Introductions](/images/intro.png){:class="img-responsive"}
+
+A great statement from this was that "whatever happens was the only thing that was supposed to happen".
+
+Following on from JCrete there is also the JCrete4Kids days which support the local school children. Some of the turned up to say thank you for the amazing contributions to their school from previous years. It's great to see the impact something that may seem trivial to me or you can have on a child's education.
+
+The way the unconference format worked was that at the beginning of each day attendees would propose any sessions they wish to run. Sessions could be presentations, practicals, discussions - basically whatever. The sessions would then be voted on and organised into time slots for each room. We would generally have sessions planned for the morning to allow for excursions in the afternoon, except one day where we would switch it around to head to a beach where an early start was advised.
+
+![Sessions planning](/images/session_planning.png){:class="img-responsive"}
+
+
+
+* 1st day
+  * Intros
+  * JCrete4Kids
+  * Unconference format
+* Excursions
+ * Early morning / amazing beach
+ * Heinz BBQ tour
+* Key sessions
+  * Dan North - JGoTesting
+  * Tomaz Nuriekz - Asycn Microservices
+* Actor Model - my session
+  * Jonas Boner / Viktor Klang
+* Last night
+  * BBQ
+  * NullPointers - "Java People"
+* People
+  * Aaron
+  * Anastasia
+  * Heinz
