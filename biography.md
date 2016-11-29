@@ -24,4 +24,18 @@ With the core of my experience being Oracle based I started looking for a more d
 
 At this point I realised that the Java knowledge I already had was limited and my understanding of Object Oriented concepts and design patterns was fairly basic. I decided it was essential to approach this new opportunity in the right way so started diving deeper into Java and Object Oriented design, as well general best practices in relation to development such as clean code and automated testing.
 
-A few years later and Java is at the core of everything I do now.
+A few years later and Java is at the centre of everything I do now.
+
+The opportunities in my current role have enabled me to explore the various tools and techniques available in the Java ecosystem and become comfortable working with complex Java based applications and creating clean, well designed and maintainable applications.
+
+Up until a few years ago I'd worked in "traditional" software teams where we generally delivered major feature releases to our customers 4-5 times a year following the Waterfall methodology. My experiences working this way showed that it was possible to successfully deliver change however I was always interested in the potential efficiencies that working in an lean or agile way could bring to the team. I had a great experience when a friend arranged for me to visit an insurance company called Simply Business based on London. I spent a day there understanding how they deliver change using lean/agile techniques. I was involved in the daily stand-up, paired with one of their developers and attended a show and tell session. The way the company was joined up in it's approach to delivering change from top-to-bottom just made sense and planted the seed in my mind motivating me to explore this area more. Unfortunately earlier in my career due to lacking influence I'd not had chance to really apply some the ideas that were starting to make sense to me.
+
+In my current role working as a Lead Developer for a software house providing services to the UK rail industry I've been able to start to apply some of the ideas that have been bubbling away in my mind. Similarly to the previous companies I'd worked for the general approach was to deliver large feature releases every few months. A new development manager joined the company and he had a fairly simple requirement, to implement some automated tests against our products.
+
+I jumped at the chance to be involved in this initiative however I knew it was an opportunity to achieve much more than just implementing some automated tests. This was an opportunity to begin applying some of the ideas that seem to make so much sense from the agile way of developing software.
+
+Over the past 2 years I have led the automation of the build & deployment for a number of products. This includes performing Continuous Integration as well as going a step further with one product and applying Continuous Delivery to deliver it to a cloud based environment using blue/green deployments. We are integrating our changes more regularly, shortening the feedback loops to find out if our changes work and delivering value to our customers much more often. The implementation of these processes has allowed the team to create various types of automated tests to help improve the quality of the software being produced. Whilst still early on in this journey the benefits of automation and feedback from the testing processes are already proving to be really beneficial.
+
+As these new ways of working settle into the business and spread throughout the whole development team we are looking at the next steps along the road to evolving our working practices with techniques such as pair programming and use of Kanban boards amongst others.
+
+It feels like I'm late to the game with this, but as they say better late than never...the future is bright.
