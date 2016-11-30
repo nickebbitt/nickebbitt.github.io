@@ -9,7 +9,7 @@ If you're running your SpringBoot app using Embedded Tomcat it may be useful to 
 
 To do this add the following config to your application.properties file:
 
-{% highlight java linenos %}
+{% highlight java %}
 server.tomcat.accesslog.enabled=true
 server.tomcat.basedir=tomcat
 {% endhighlight %}
