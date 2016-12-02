@@ -12,7 +12,7 @@ I have a passion for software development, particularly the processes involved i
 
 I am flexible and pragmatic when it comes the tools & techniques used to deliver change. I rely on lean, agile and XP practices wherever possible.
 
-I love writing code with core strengths in Object Oriented languages (Java), relational databases (Oracle) and I have an understanding of other paradigms such as functional.
+I love writing code with core strengths in Object Oriented languages (Java) and relational databases (Oracle). I also have an understanding of other programming paradigms such as functional. I'm comfortable with the design and architecture of complex systems.
 
 Quality of software is very important to me. I utilise suitable tools & techniques to implement various flavours of tests. I believe that testing is a core part of the developers role in implementing a feature and should be valued highly.
 
