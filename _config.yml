@@ -1,5 +1,5 @@
 # Site settings
-title: Software development and that...
+title: Software development and that!
 description: > # this means to ignore newlines until "baseurl:"
   This site hosts my development blog, CV and general info about things I'm up to.
 baseurl: "" # the subpath of your site, e.g. /blog/
