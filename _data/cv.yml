@@ -1,0 +1,78 @@
+url: https://nickebbitt.github.io
+projectUrl: nickebbitt.github.io
+
+person:
+  name: Nick Ebbitt
+  profesion: Software Engineer
+  location: Manchester, UK
+  citizenship: British
+  email: nickebbitt@gmail.com
+  site: nickebbitt.github.io
+  phone: --
+  github: /nickebbitt
+  stackoverflow: /nickebbitt
+
+career:
+ - position: Development Team Leader
+   company: Tracsis PLC
+   location: Manchester, UK
+   dates: February 2013 - current
+   summary: Hands-on technical lead responsbile for the the delivery of multiple key strategic products to the support the ongoing growth of the business.
+   accomplishments:
+    - accomplishment: Central to the design and implementation of the mobile platform supporting delivery of the award winning <a href="https://tracsisops.com/software/business-management-software/dayone/">DayOne</a> product.
+    - accomplishment: Led the successful modernisation of development practices within the organisation.
+    - accomplishment: Introduced DVCS (Git, GitLab), Continuous Integration (Jenkins, Nexus) and automated testing (Selenium, JUnit, RestAssured) to the development team's processes.
+    - accomplishment: Redesigned DayOne mobile platform to utilise cloud based architecture (AWS) following a Continuous Delivery aproach.
+    - accomplishment: Coordinated monthly developer forums to promote knowledge sharing and team builing via tech talks.
+ - position: Solutions Architect
+   company: Allianz Business Service Ltd.
+   location: Lancaster, UK
+   dates: February 2012 – February 2013
+   summary: Member of the architecture team within the wider Allianz group. Responsible for the analysis, design and architecture of new systems and changes to eixsting systems used by the business.
+   accomplishments:
+    - accomplishment: Led the design and architecture of a web based system providing integration between the insurance pricing engine and quote aggregator web sites. Utilised Domain Driven Design (DDD) principles throughout this process. Ran workshops helping to establish the canonical domain model based on the insurance domain to support the system.
+    - accomplishment: Producing the domain model to support the transformation of the company's customer focused MI offering.
+
+technicalSkills:
+  list:
+    - tr: "Impulsive, creative and very social"
+    - tr: "Heart and soul of the Ninja Turtles"
+    - tr: "Master of the Kusarigama and nunchucks"
+    - tr: "Labeled as 'The Wild One' and 'The Party Dude'"
+    - tr: "First of the turtles to taste pizza"
+    - tr: "Very proud of his talent for naming thing"
+  backend:
+   - name: Ninjutsu
+     level: 90
+   - name: Kusarigama
+     level: 80
+  frontend:
+   - name: Cooking Skills
+     level: 80
+   - name: Pranks
+     level: 90
+  other:
+   - name: Shadow Puppet Skill
+     level: 90
+   - name: Teaching
+     level: 100
+
+sideProjects:
+  - name: jekyll-clean-dark
+    description: Theme for Jekyll - static site generator. After creating theme for my blog I shared it on github.
+    link: https://github.com/streetturtle/jekyll-clean-dark
+    type: github
+    langs: HTML/CSS/Bootstrap
+
+  - name: number-writing-trainer
+    description: Application which helps with learning foreign numerals. Was created to help with learning how to write french numbers as well as to practice AngularJS.
+    link: http://pavelmakhov.com/number-writing-trainer/#/
+    type: site
+    langs: AngularJS/HTML/CSS/Bootstrap
+
+education:
+  - name: Master Splinter Academy
+    degree: Mutant Red-Eared Slider
+    location: sewers of New York City
+    dates: 2007 – 2012
+    link: http://tmnt2012series.wikia.com/
