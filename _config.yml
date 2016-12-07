@@ -1,2 +1,6 @@
-permalink: /notes/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title
 markdown: kramdown
+gems:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from

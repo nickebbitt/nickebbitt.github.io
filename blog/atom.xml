@@ -4,11 +4,11 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Notes from Nick Ebbitt</title>
- <link href="https://nickebbitt.github.io/notes/atom.xml" rel="self"/>
- <link href="https://nickebbitt.github.io/notes/"/>
+ <title>Blog posts from Nick Ebbitt</title>
+ <link href="https://nickebbitt.github.io/blog/atom.xml" rel="self"/>
+ <link href="https://nickebbitt.github.io/blog/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>https://nickebbitt.github.io/notes/</id>
+ <id>https://nickebbitt.github.io/blog/</id>
  <author>
    <name>Nick Ebbitt</name>
  </author>
@@ -18,7 +18,7 @@ layout: feed
    <title>{{ post.title }}</title>
    <link href="https://nickebbitt.github.io{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>ttps://nickebbitt.github.io/notes{{ post.id }}</id>
+   <id>ttps://nickebbitt.github.io/blog{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

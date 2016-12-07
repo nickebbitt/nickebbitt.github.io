@@ -3,6 +3,7 @@ layout: post
 title:  "JCrete 2016"
 date:   2016-11-29 00:00:00
 categories: java
+redirect_from: "/java/2016/11/29/jcrete-2016.html"
 ---
 In late 2015 I arranged for Heinz Kabutz (Java Champion and the man behind [javaspecialists.eu](http://javaspecialists.eu/)) to visit the company I work for and teach his Java Specialist Master course to my team.
 

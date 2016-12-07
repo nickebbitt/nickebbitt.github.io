@@ -3,6 +3,7 @@ layout: post
 title:  "Tomcat access logs in SpringBoot"
 date:   2016-09-19 20:03:11
 categories: springboot
+redirect_from: "/springboot/2016/09/19/tomcat-access-logs-in-springboot.html"
 ---
 
 If you're running your SpringBoot app using Embedded Tomcat it may be useful to generate the access logs.
