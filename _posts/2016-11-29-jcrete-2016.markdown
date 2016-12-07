@@ -55,11 +55,11 @@ The final session worth mentioning was the one I proposed on Actor Model, and sp
 
 The planned technical sessions though are only half the story about JCrete. The excursions take JCrete to the next level in terms of value and enjoyment.
 
-The excursions were a great opportunity to continue discussions further, sometimes whilst floating in the sea.
+The excursions were a great opportunity to continue discussions further, sometimes whilst floating in the sea...
 
 ![Java in the sea](/assets/jcrete/java-in-the-sea.png){:class="img-responsive"}
 
-The most memorable of the excursions has to the early morning start to Elafonnisi. It was about 1 1/2 hours from Kolymbari and the roads were best suited to 4x4 vehicles. Following the journey over there we then had a 20 minute hike down to the beach but boy was it worth it. The beach was empty, the views fantastic and there was simply a huge feeling of well being and relaxation. The reason we went early was to avoid the crowds and this turned out be a very good idea as when we were heading home at around 11am the tourists were flocking in and it simply wouldn't have been the same had we come later. I've nicked the following picture from [Stephen Chin's collection](https://www.flickr.com/photos/steveonjava/sets/72157671155561551) as the ones I took wouldn't have done it justice.
+The most memorable of the excursions has to be the early morning start to Elafonnisi. It was about 1 1/2 hours from Kolymbari and the roads were best suited to 4x4 vehicles. Following the journey over there we then had a 20 minute hike down to the beach but boy was it worth it. The beach was empty, the views fantastic and there was simply a huge feeling of well being and relaxation. The reason we went early was to avoid the crowds and this turned out be a very good idea as when we were heading home at around 11am the tourists were flocking in and it simply wouldn't have been the same had we come later. I've nicked the following picture from [Stephen Chin's collection](https://www.flickr.com/photos/steveonjava/sets/72157671155561551) as the ones I took wouldn't have done it justice.
 
 ![Elafonnisi](/assets/jcrete/elafonnisi.png){:class="img-responsive"}
 
