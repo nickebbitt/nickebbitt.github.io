@@ -1,5 +1,9 @@
 permalink: /blog/:year/:month/:day/:title
 markdown: kramdown
+github_username: nickebbitt
+twitter_username: nickebbitt
+linkedin_username: nickebbitt
+stackoverflow_username: 2323210/nickebbitt
 gems:
   - jekyll-redirect-from
 whitelist:
