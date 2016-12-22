@@ -48,9 +48,11 @@ _NOTE: I'm aware of some debate as to whether you should use mocks for testing o
 
 It is likely that during the development of an application you will be writing different types of tests with the intention of increasing the confidence that what you are producing is correct.
 
-This will usually start with unit tests in which you’ll be aiming to test a single unit of your application such as an instance of a single class. If the object you are testing collaborates with another object then using a design pattern such as [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and a mocking framework (e.g. [Mockito](http://site.mockito.org/)) you will be able to inject a mock of the collaborator into the unit you are testing.
+![Testing Pyramid](/assets/wiremock/testing-pyramid.png){:class="img-responsive"}
 
-Similarly, if you are testing at a higher level and looking to prove the correctness of a subsystem or the application as a whole then it may be desirable to mock the application’s external dependencies such as the database, a queue, or a web service.
+This will usually start at the lowest level with unit tests in which you’ll be aiming to test a single unit of your application such as an instance of a single class. If the object you are testing collaborates with another object then using a design pattern such as [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and a mocking framework (e.g. [Mockito](http://site.mockito.org/)) you will be able to inject a mock of the collaborator into the unit you are testing.
+
+Similarly, if you are testing at a higher up the pyramid and looking to prove the correctness of a subsystem or the application as a whole then it may be desirable to mock the application’s external dependencies such as the database, a queue, or a web service.
 
 It’s important to note I believe mocks are very useful but are not a replacement for testing against the “real” thing. This is still necessary, whether automated or manual, and should definitely be part of an overall testing strategy.
 
@@ -58,7 +60,11 @@ It’s important to note I believe mocks are very useful but are not a replaceme
 
 It’s quite common for an application to depend on an external web service. The external service could be external to the company and controlled by a 3rd party e.g. Twitter.
 
-It could be a separate service from within the same organisation but controlled by a different team. It is quite common for micro-service architectures to communication over HTTP.
+![3rd-party](/assets/wiremock/3rd-party.png){:class="img-responsive"}
+
+It could be a separate service from within the same organisation but controlled by a different team. It is quite common for microservices architecture to communicate over HTTP.
+
+![microservices](/assets/wiremock/microservices.png){:class="img-responsive"}
 
 ## Introducing WireMock
 
