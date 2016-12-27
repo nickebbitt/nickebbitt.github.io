@@ -4,7 +4,7 @@ title:  "Making a mockery of web services"
 date:   2016-12-17 00:00:00
 categories: java
 ---
-In October 2016 I gave my first public talk at the Manchester Java Community (MJC). This blog provides the detail of what I discussed to support the [slides](https://speakerdeck.com/nickebbitt/making-a-mockery-of-web-services).
+In October 2016 I gave my first public talk at the Manchester Java Community (MJC). The talk took the form of a 15 minute lightning talk and this blog provides the detail of what I discussed to support the [slides](https://speakerdeck.com/nickebbitt/making-a-mockery-of-web-services).
 
 # Abstract
 
@@ -52,39 +52,53 @@ It is likely that during the development of an application you will be writing d
 
 This will usually start at the lowest level with unit tests in which you’ll be aiming to test a single unit of your application such as an instance of a single class. If the object you are testing collaborates with another object then using a design pattern such as [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) and a mocking framework (e.g. [Mockito](http://site.mockito.org/)) you will be able to inject a mock of the collaborator into the unit you are testing.
 
-Similarly, if you are testing at a higher up the pyramid and looking to prove the correctness of a subsystem or the application as a whole then it may be desirable to mock the application’s external dependencies such as the database, a queue, or a web service.
+Similarly, if you are testing at a higher up the pyramid and looking to prove the correctness of a subsystem or the application as a whole then it may be desirable to mock the application’s external dependencies such as a database, a queue, or a web service.
 
 It’s important to note I believe mocks are very useful but are not a replacement for testing against the “real” thing. This is still necessary, whether automated or manual, and should definitely be part of an overall testing strategy.
 
 ### Mocking web services
 
-It’s quite common for an application to depend on an external web service. The external service could be external to the company and controlled by a 3rd party e.g. Twitter.
+It’s common for an application to depend on an external HTTP-based web service. The dependency could be external to the company and controlled by a 3rd party e.g. Twitter.
 
 ![3rd-party](/assets/wiremock/3rd-party.png){:class="img-responsive"}
 
-It could be a separate service from within the same organisation but controlled by a different team. It is quite common for microservices architecture to communicate over HTTP.
+It could be a separate service from within the same organisation but controlled by a different team. It is quite common for microservices to communicate over HTTP.
 
 ![microservices](/assets/wiremock/microservices.png){:class="img-responsive"}
 
 ## Introducing WireMock
 
-There are various tools or frameworks available that support the mocking of HTTP based APIs or web services however I’m going to focus on WireMock that we have used to good effect to support our development and automated integration testing processes within Tracsis.
+There are various tools or frameworks available that support the mocking of HTTP-based APIs & web services. WireMock is one such framework that we will explore in more detail having used to good effect to support the development and automated testing of the mobile platform described in the intro.
 
-WireMock was created a few years ago by Tom Akehurst, a London based developer.
+[WireMock](http://wiremock.org/) was created in 2011 by [Tom Akehurst](http://www.tomakehurst.com/about/), a software engineer based in the south of England.
 
-The framework is open source which appealed to us as development team and is quite mature at version 2.
+The framework is [open source](https://github.com/tomakehurst/wiremock) with source hosted on GitHub and is quite mature (v2.4.1 at the time of writing).
 
-The documentation on the website is pretty good, contains lots of useful info and examples.
+The documentation for WireMock is very good providing useful descriptions of the available features and plenty of examples to get you started.
 
 ### Deployment
 
-In it’s simplest form, WireMock comes as a runnable JAR that can be started from the command line. This mode proves to be very useful during development to provide a reliable web service running on your local machine to develop against.
+In its simplest form WireMock comes as a runnable JAR that can be started from the command line. This mode has proven to be very useful during development to giving us a reliable web service running on your local machine to develop against.
 
-WireMock can also be deployed to a servlet container if that’s your preference.
+```bash
+$ java -jar wiremock-standalone-2.1.1.jar --port 9999
+```
 
-There is a comprehensive Java API from which you can created an embedded WireMock server and configure as required.
+Alternatively, WireMock can be deployed to a servlet container such as Tomcat if that’s your preference.
 
-Finally, and more interesting from a Java testing perspective, WireMock provides Junit integration using @Rules.
+There is also a comprehensive Java API from which you can create an embedded WireMock server and configure as required.
+
+```java
+WireMockServer wireMockServer = new WireMockServer();
+wireMockServer.start();
+```
+
+Finally, and more interesting from a Java testing perspective, WireMock provides JUnit integration using the @Rule annotation.
+
+```java
+@Rule
+public WireMockRule wireMockRule = new WireMockRule(9999);
+```
 
 ### Key features
 
