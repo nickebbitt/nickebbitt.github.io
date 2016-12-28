@@ -80,7 +80,7 @@ The documentation for WireMock is very good providing useful descriptions of the
 
 In its simplest form WireMock comes as a runnable JAR that can be started from the command line. This mode has proven to be very useful during development to giving us a reliable web service running on your local machine to develop against.
 
-```bash
+```
 $ java -jar wiremock-standalone-2.1.1.jar --port 9999
 ```
 
