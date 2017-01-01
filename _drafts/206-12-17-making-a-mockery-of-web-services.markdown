@@ -8,17 +8,17 @@ In October 2016 I gave my first public talk at the Manchester Java Community (MJ
 
 # Abstract
 
-With the help of [WireMock](http://wiremock.org/) we will explore how to create reliable and repeatable integration/system tests for an application that depends on an external web service or HTTP-based API.
+With the help of [WireMock](http://wiremock.org/) we will explore how to create reliable and repeatable end-to-end tests for an application that depends on an external web service or HTTP-based API.
 
 ## The Problem
 
-Until around 5 years ago all my experience was heavily focused in the client/server world of Oracle RDBMS and Oracle Forms. I then started working on web applications that followed a more three tiered architecture. These applications have generally followed the same pattern, a database (usually Oracle) exposed to the public internet via a HTTP-based web service that is consumed by a HTML/JavaScript based user interface.
+Until around 5 years ago all my experience was heavily focused in the client/server world of Oracle RDBMS and Oracle Forms. I then started working on web applications that followed a more three tiered architecture. These applications have generally followed the same pattern, a database (usually Oracle) exposed via a HTTP-based web service that is consumed by a HTML/JavaScript based user interface.
 
 The most recent system of this nature that I have worked on was a mobile platform to provide integration between mobile devices and a "backend" HTTP-based web service. The mobile platform was cloud based exposing HTTP endpoints to be consumed by the mobile clients.
 
-We chose to architect the system to allow us to follow a Continuous Delivery (CD) approach using blue/green deployments. To allow us to deliver the system using this way it was essential that we could run automated acceptance tests to provide us with the confidence that we had a system that was always releasable.
+We chose to architect the system to allow us to follow a Continuous Delivery (CD) approach using blue/green deployments. To allow us to deliver the system this way it was essential that we could run automated acceptance tests to provide us with the confidence that we had a system that was always releasable.
 
-The remainder of this blog explores the tools & techniques used to approach this problem.
+This blog post explores the tools & techniques used to approach this problem.
 
 ## Define: Mock
 
@@ -38,15 +38,13 @@ I think it's important to consider mocks more generally than just in applied to 
 
 ### Why use mocks?
 
-Mocks help us to write tests that are deterministic and repeatable. They provide a way of controlling the behaviour collaborative dependencies that the object (or system) under test is interacting with.
+Mocks help us to write tests that are deterministic and repeatable. They provide a way of controlling the behaviour of dependencies that the object (or system) under test is collaborating or interacting with.
 
 This control allows us to model the various scenarios or use-cases necessary to prove that the software meets the acceptance criteria.
 
-_NOTE: I'm aware of some debate as to whether you should use mocks for testing or not.  All I know is they have proved useful to me when writing tests._
-
 ### When to mock?
 
-It is likely that during the development of an application you will be writing different types of tests with the intention of increasing the confidence that what you are producing is correct.
+It is likely that during the development of an application you will be writing different types of tests with the intention of increasing the confidence that the changes you are developing are correct.
 
 ![Testing Pyramid](/assets/wiremock/testing-pyramid.png){:class="img-responsive"}
 
@@ -72,13 +70,13 @@ There are various tools or frameworks available that support the mocking of HTTP
 
 [WireMock](http://wiremock.org/) was created in 2011 by [Tom Akehurst](http://www.tomakehurst.com/about/), a software engineer based in the south of England.
 
-The framework is [open source](https://github.com/tomakehurst/wiremock) with source hosted on GitHub and is quite mature (v2.4.1 at the time of writing).
+The framework is mature (v2.4.1 at the time of writing), [open source](https://github.com/tomakehurst/wiremock) and hosted on GitHub.
 
 The documentation for WireMock is very good providing useful descriptions of the available features and plenty of examples to get you started.
 
 ### Deployment
 
-In its simplest form WireMock comes as a runnable JAR that can be started from the command line. This mode has proven to be very useful during development to giving us a reliable web service running on your local machine to develop against.
+In its simplest form WireMock comes as a runnable JAR that can be started from the command line. This mode has proven to be very useful during development providing a reliable web service running on your local machine to develop changes against.
 
 ```
 $ java -jar wiremock-standalone-2.1.1.jar --port 9999
@@ -102,26 +100,52 @@ public WireMockRule wireMockRule = new WireMockRule(9999);
 
 ### Key features
 
-In regards to the feature set of WireMock...
+I'll simply highlight the main features here, for a more details the official [docs](http://wiremock.org/docs/) are the place to go. The code samples here are taken directly from the official docs.
 
-Stubbing allows you to pre-define a canned response that will be served when a request is made matching a specific URL pattern.
+_Stubbing_ allows you to pre-define a canned response from the mock service that will be served when a request is made that matches a specific URL pattern.
 
-Verifying allows you to prove that your application interacts with the external service in the way that you require it to.
+```java
+@Test
+public void exactUrlOnly() {
+    stubFor(get(urlEqualTo("/some/thing"))
+            .willReturn(aResponse()
+                .withHeader("Content-Type", "text/plain")
+                .withBody("Hello world!")));
 
-WireMock can be used as a proxy.
+    assertThat(testClient.get("/some/thing").statusCode(), is(200));
+    assertThat(testClient.get("/some/thing/else").statusCode(), is(404));
+}
+```
 
-The ability to record and playback interactions with the external service is pretty cool. It is a great way to create a base set of request mappings for use in development or with your tests.
+_Verifying_ allows you to prove that your application has interacted with the mock service in the way that you require it to.
 
-The ability to simulate faults is very useful, particularly when it comes to testing the resilience of your application. One example would be to add a delay to the interaction with the external service to prove that your app behaves as expected.
+```java
+verify(postRequestedFor(urlEqualTo("/verify/this"))
+        .withHeader("Content-Type", equalTo("text/xml")));
+```
 
-Stateful behaviour provide a way to interact with the mock service and have it alter it’s state based on the interactions made. It acts as a state machine that can move through various states during a test to allow you to model more complex scenarios.
+_Proxying_ provides the ability for WireMock to selectively proxy requests to other hosts. This also supports the ability to record and playback interactions with the a service that it is proxying to. I found this a great way to create a base set of request mappings for use in development or to support your test suite.
+
+```java
+stubFor(get(urlMatching("/other/service/.*"))
+        .willReturn(aResponse().proxiedFrom("http://otherhost.com/approot")));
+```
+
+The ability to _simulate faults_ is very useful, particularly when it comes to testing how resilient your application is to failures or inconsistent behaviour of its external dependencies. One example would be to add a delay to the interaction with the mock service to prove that your app behaves as expected.
+
+```java
+stubFor(get(urlEqualTo("/delayed")).willReturn(
+        aResponse()
+                .withStatus(200)
+                .withFixedDelay(2000)));
+```                
+
+_Stateful behaviour_ provides a way to interact with the mock service and have it alter it’s state based on the interactions made. It allows WireMock to act as a state machine that can move through various states during a test to allow more complex scenarios to be modeled.
 
 ## Conclusion
 
-In conclusion, through my experience of using WireMock we’ve been able to...
+Through the use of a tool such as WireMock we were able to reduce our dependencies on the real service being available. This has not only been valuable during the execution of our automated test suite but has provided additional benefit during development with us realising an increase in developer productivity due to not being reliant on the “real” service being available and working as expected.
 
- * reduce dependency on the real service being available - it’s important to mention however that while tools like this are great, they don’t completely replace the need to test against the real thing.
- * improve the testability of the application, allowing us to create new tests for new features with less effort
- * and therefore ultimately we have been able to improve the quality of product we are delivering.
+We have also been able to significantly improve the testability of the application, allowing us to create new tests for new features with less effort.
 
-An additional benefit has been an increase in developer productivity due to not being reliant on the “real” service being available and working as expected.
+This has ultimately resulted in higher quality product being delivered more regularly and efficiently.
