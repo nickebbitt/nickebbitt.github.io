@@ -100,7 +100,7 @@ public WireMockRule wireMockRule = new WireMockRule(9999);
 
 ### Key features
 
-I'll simply highlight the main features here, for a more details the official [docs](http://wiremock.org/docs/) are the place to go. The code samples here are taken directly from the official docs.
+I'll simply highlight the main features here, for more details the official [docs](http://wiremock.org/docs/) are the place to go. The code samples here are taken directly from the official docs.
 
 _Stubbing_ allows you to pre-define a canned response from the mock service that will be served when a request is made that matches a specific URL pattern.
 
