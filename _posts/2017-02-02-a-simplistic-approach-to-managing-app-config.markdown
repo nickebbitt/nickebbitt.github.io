@@ -103,12 +103,12 @@ git log --pretty=format:"%h - %an (%ae), %ad : %s" > commit.log
 This produces output such as:
 
 {% highlight bash %}
-e3e0728 - Nick Ebbitt (nickebbitt@gmail.com), Mon Jan 30 20:34:11 2017 +0000 : Fix grammatical error
-81826b4 - Nick Ebbitt (nickebbitt@gmail.com), Wed Jan 25 13:58:48 2017 +0000 : Reword introduction
-af7a186 - Nick Ebbitt (nickebbitt@gmail.com), Wed Jan 4 21:03:44 2017 +0000 : Add Amazon Linux to tech skills
-167244c - Nick Ebbitt (nickebbitt@gmail.com), Wed Jan 4 10:04:22 2017 +0000 : Update footer to 2017
-61ef2f7 - Nick Ebbitt (nickebbitt@gmail.com), Tue Jan 3 21:06:32 2017 +0000 : Update photo on main page
-5fa1a83 - Nick Ebbitt (nickebbitt@gmail.com), Tue Jan 3 19:19:07 2017 +0000 : Update technical skills on CV
+e3e0728 - Nick Ebbitt (someone@gmail.com), Mon Jan 30 20:34:11 2017 +0000 : Fix grammatical error
+81826b4 - Nick Ebbitt (someone@gmail.com), Wed Jan 25 13:58:48 2017 +0000 : Reword introduction
+af7a186 - Nick Ebbitt (someone@gmail.com), Wed Jan 4 21:03:44 2017 +0000 : Add Amazon Linux to tech skills
+167244c - Nick Ebbitt (someone@gmail.com), Wed Jan 4 10:04:22 2017 +0000 : Update footer to 2017
+61ef2f7 - Nick Ebbitt (someone@gmail.com), Tue Jan 3 21:06:32 2017 +0000 : Update photo on main page
+5fa1a83 - Nick Ebbitt (someone@gmail.com), Tue Jan 3 19:19:07 2017 +0000 : Update technical skills on CV
 {% endhighlight %}
 
 ## Final thoughts...
