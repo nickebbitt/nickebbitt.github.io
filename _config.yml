@@ -4,6 +4,7 @@ github_username: nickebbitt
 twitter_username: nickebbitt
 linkedin_username: nickebbitt
 stackoverflow_username: 2323210/nickebbitt
+future: true
 gems:
   - jekyll-redirect-from
 whitelist:
