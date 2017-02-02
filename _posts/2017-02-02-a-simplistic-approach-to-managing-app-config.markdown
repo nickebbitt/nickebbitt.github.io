@@ -115,4 +115,4 @@ af7a186 - Nick Ebbitt (someone@gmail.com), Wed Jan 4 21:03:44 2017 +0000 : Add A
 
 So that's it. As in the title, this is a very simplistic approach that may not stand the test of the time but it works quite well for our basic needs right now.
 
-Currently this solution doesn't provide a way for app components to discover their config or receive config changes at runtime however without too much effort this solution could be reworked to play nicely with [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/).
+Currently this solution doesn't provide a way for app components to discover their config or receive config changes at runtime however without too much effort this solution could be reworked to play nicely with [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/) or an equivalent tool.
