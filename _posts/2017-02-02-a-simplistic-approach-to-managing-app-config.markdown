@@ -116,3 +116,7 @@ af7a186 - Nick Ebbitt (someone@gmail.com), Wed Jan 4 21:03:44 2017 +0000 : Add A
 So that's it. As in the title, this is a very simplistic approach that may not stand the test of the time but it works quite well for our basic needs right now.
 
 Currently this solution doesn't provide a way for app components to discover their config or receive config changes at runtime however without too much effort this solution could be reworked to play nicely with [Spring Cloud Config](https://cloud.spring.io/spring-cloud-config/) or an equivalent tool.
+
+The solution could also benefit from some kind inheritance model to reduce duplication. There are undoubtedly a common set of defaults values that rarely change across customers.
+
+Arguably we could also do away with the version dimension as we will likely always be delivering the latest version for which the config must be compatible. We would therefore have a single set of config params for each customer / product / environment further reducing duplication.
