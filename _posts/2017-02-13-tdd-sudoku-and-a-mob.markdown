@@ -20,3 +20,5 @@ TDD is conceptually straight forward but put 15+ people working on a problem tog
 A mob of 15+ programmers with varying opinions, some on less important factors such as coding style, can easily result in a less than productive overall process. The large number will no doubt be a factor here but possibly someone controlling the mob and providing more direction to keep focus on the problem at hand would be beneficial. We did waste a lot of time on "tabs vs spaces" type discussion.
 
 So while the first session wasn't hugely productive in terms of creating a "Sudoku Solver" it was definitely an interesting process. I'm looking forward to the next session where we'll look to progress further with hopefully more discipline.
+
+Finally, I just stumbled on [a post](https://silkandspinach.net/2017/02/10/its-bikesheds-all-the-way-down/) from Kevin Rutherford who was also in attendance. Some useful additional insights.
