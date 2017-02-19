@@ -57,6 +57,9 @@ ul.swatch li:first-child { webkit-border-top-left-radius: 9px; -webkit-border-bo
 .cv li { line-height: 23px; }
 .cv h2 { font-size: 26.5px; }
 .cv h1 { font-size: 32.5px; }
+.panel-heading {
+    cursor: pointer;
+}
 
 .posts, .contact, .about, .cv, .error, .swatches { margin-bottom: 30px; }
 
