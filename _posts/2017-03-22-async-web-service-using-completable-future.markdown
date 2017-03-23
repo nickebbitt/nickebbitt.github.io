@@ -168,7 +168,7 @@ public CompletableFuture<String> getValueAsyncUsingCompletableFutureComposed() {
 
     return CompletableFuture
             .supplyAsync(this::processRequest)
-            .thenApplyAsync(r -> new StringBuilder(r).reverse().toString());
+            .thenApplyAsync(this::reverseString);
 
 }
 {% endhighlight %}
