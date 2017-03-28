@@ -3,6 +3,7 @@ layout: post
 title:  "Asynchronous web service using CompletableFuture"
 date:   2017-03-22 00:00:00
 categories: java, springboot
+comments: true
 ---
 
 Until recently I've not spent a lot time looking into the enhancements provided in

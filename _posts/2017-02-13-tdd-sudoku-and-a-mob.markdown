@@ -2,6 +2,7 @@
 layout: post
 title:  "TDD, Sudoku and a mob!"
 date:   2017-02-13 00:00:00
+comments: true
 ---
 Last week I attended [XP Manchester](https://xpmanchester.wordpress.com/) where the meetup was advertised as [TDD Sudoku #1](https://xpmanchester.wordpress.com/2017/02/02/xpman-80-xpmanchester-tdds-sudoku-1/). The inspiration for this session was provided by a similar exercise carried out by [Ron Jeffries around 10 years ago](http://ronjeffries.com/xprog/articles/oksudoku/). The objective was to follow a similar process to create a "Sudoku Solver" with the aim of understanding the possible reasons why Ron's attempt was ultimately unsuccessful.
 

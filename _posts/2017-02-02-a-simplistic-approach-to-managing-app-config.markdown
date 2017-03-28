@@ -2,6 +2,7 @@
 layout: post
 title:  "A simplistic approach to managing app config"
 date:   2017-02-02 00:00:00
+comments: true
 ---
 I've recently been involved in the transformation of the processes used to deliver change from being heavily manual, time consuming and error prone to fully automated, efficient and reliable.
 

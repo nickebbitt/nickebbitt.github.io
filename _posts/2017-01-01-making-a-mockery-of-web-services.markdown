@@ -3,6 +3,7 @@ layout: post
 title:  "Making a mockery of web services"
 date:   2017-01-01 00:00:00
 categories: java
+comments: true
 ---
 In October 2016 I gave my first public talk at the Manchester Java Community (MJC). The talk took the form of a 15 minute lightning talk and this blog provides the detail of what I discussed to support the [slides](https://speakerdeck.com/nickebbitt/making-a-mockery-of-web-services).
 
