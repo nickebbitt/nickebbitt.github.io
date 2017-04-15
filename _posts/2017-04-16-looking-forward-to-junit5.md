@@ -213,3 +213,7 @@ One key area I've not covered at all that looks intriguing is the ability to wri
 The new [extension model](http://junit.org/junit5/docs/current/user-guide/#extensions) also looks like it will provide a simple and flexible new way for JUnit to be extended, improving on the previous options of `Runner`, `@Rule` and `@ClassRule`.
 
 I'm looking forward to the making use of all of the great new features when JUnit 5 is released.
+
+---
+
+All code from this post is available on [GitHub](https://github.com/nickebbitt/junit5-examples).
