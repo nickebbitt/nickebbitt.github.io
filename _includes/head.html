@@ -12,5 +12,7 @@
 	<link href="/css/autumn.css" rel="stylesheet">
 
 	<!-- google analytics - i will not share this data with google -->
-	{% include analytics.html %}
+	{% if site.google_analytics and jekyll.environment == 'production' %}
+		{% include analytics.html %}
+	{% endif %}
 </head>
