@@ -111,9 +111,15 @@ In many applications, there will be a mix of tests of different styles such as u
 
 _Infinitest_ provides the ability to filter tests for this exact reason. Simply adding an `infinitest.filters` file to the root of your project and adding regular expressions (one per line) will filter out the tests that match.
 
-A simple example to filter out integration tests, assuming they have names such as `MyAppIT`, is to create a file with the following content.
+A simple example to filter out integration tests, assuming they have names such as `MyAppIT`, is to create a file with the following content:
 
 `.*IT`
+
+Filters can also be applied to packages using a regex such as:
+
+`com\.nickebbitt\.it\..*`
+
+If using [TestNG](http://testng.org/doc/) rather than [JUnit](http://junit.org/junit4/) there is also the option to filter tests using TestNG groups.
 
 ---
 
