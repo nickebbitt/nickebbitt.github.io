@@ -19,3 +19,5 @@ public static void main(String[] args) throws IOException {
 {% endhighlight %}
 
 There are other variants of `Files.readAllLines` such as `Files.readAllBytes` etc.
+
+Also, if it's a `Stream` you're after then use `Files.lines`.
