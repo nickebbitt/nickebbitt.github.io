@@ -2,7 +2,7 @@
 layout: post
 title:  "Git aliases"
 date:   2017-08-21 00:00:00
-categories: java, files
+categories: git, version-control
 comments: true
 ---
 
