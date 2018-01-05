@@ -6,70 +6,65 @@ categories: java, jug, community
 comments: true
 ---
 
-Following [JCrete](http://www.jcrete.org/) in the summer of 2016 I returned inspired by the people I had met and highly motivated to become more involved
-in the local tech community. This led me to attend more events such as XP Manchester and the Manchester Java Community (MJC). I also offered to speak at a future MJC event if they would be open to that.
+Following [JCrete]({% post_url 2016-11-29-jcrete-2016 %}) in the summer of 2016 I returned inspired by the people I had met and highly motivated to become more involved
+in the local tech community. This led me to attend more events such as XP Manchester and the Manchester Java Community (MJC). I also offered to speak at a future MJC event if they would be open to it.
 
-In October 2016 I did my first (and only so far) public tech talk for the MJC. Following this I caught up with Alison McGreavy who founded the MJC back in 2013 for some feedback. She provided some useful feedback and then to my surprise she asked if I'd like to help run the event along with her and Debbie Roycroft. At this point I had little idea what it would involve but decided to dive right in and accepted her offer.
+In October 2016 I did my first (and only so far) public [tech talk]({% post_url 2017-01-01-making-a-mockery-of-web-services %}) for the MJC. Following this I caught up with one of the MJC leaders Alison McGreavy (who founded the group back in 2013) for some feedback. She provided some useful feedback about my talk and then to my surprise she asked if I'd like to help run the event along with her and Debbie Roycroft. At this point I had little idea what it would involve but decided to dive right in and accepted her offer.
 
-This is my review of the events I was involved in this year, as well as my thoughts being involved in the community.
+Over the course of the year we held 10 events in total. Six of these were what I would call traditional events with a speaker presenting on a specific topic for around 45 mins, one of which was with a remote speaker. We had one event that consisted of _lightning_ talks lasting approximately 15 minutes each. We had two pratcial sessions, one a hands-on kata and the other as part of a a global online hackday. Finally, we joined the [vJUG24](https://virtualjug.com/vjug24-session-20-ways-to-boost-dev-productivity/) online conference.
 
-* Will be replaced with the ToC
-{:toc}
+We hosted the events at a variety of great venues such as the event spaces at Auto Trader, Rental Cars, Coop (Federation House) and BJSS as well as a couple at our spiritual home of MadLab.
 
-## January: Hazelcast for the cloud, with Spring Boot, Atomist and Eureka
+I've met a real mix of people at the events over the year from students and Java developers just starting out in their tech career, to seasoned professionals. The one constant from pretty much everyone I've met is their passion for technology and Java in particular.
 
-At the first event of the year, and the first I helped out with, we had Neil Stevenson from Hazelcast speaking about all things Hazelcast. As per the buzz-word heavy talk title he was using SpringBoot to demonstrate various features as well as an interesting tool called [Atomist](https://atomist.com/).
+Out of all the events we ran this year, the following are those that really stood out for me. 
 
-## March: JBake. Static site generation ... on the JVM!
+## 4th Birthday Kata
 
-In March, we held an event at a new venue to us called Rise. [JBake](http://jbake.org/) is a Java based, open source, static site/blog generator for developers & designers. [Jonathan Bullock](https://twitter.com/jonbullock) (creator of JBake) travelled over from North Wales to give us a great intro to creating a static website with JBake.
+April marked the 4th anniversary since the MJC was founded. The first event was held at MadLab and attended by a grand total of 4 people, two of which were Alison McGreavy and Debbie Roycroft. Since these humble beginnings the group has grown to over 700 members in 4 years which is a great achievement.
 
-More interesting from my perspective were the insights into the open-source community that Jonathan provided. His passion for Java and software in general shone through.
+We decided to hold a more hands-on practical meetup for this event. We found what looked like an interesting [birthday themed kata](http://matteo.vaccari.name/blog/archives/154) designed by [Matteo Vaccari](http://matteo.vaccari.name/) based on exploring an approach to software architecture known as [Hexagonal Architecture](http://alistair.cockburn.us/Hexagonal+architecture) (aka Ports & Adapters).
 
-## April: 4th Birthday Kata
+This was my first experience of a kata and I thought it was great. We had people working in pairs whilst Debbie Roycroft and I helped to ensure everyone made progress. There was a real mix of people of all skill levels and I got the feeling the majority enjoyed themselves and learned a few things along the way. I definitely did!
 
-April marked the 4th anniversary since the MJC was founded by Alison McGreavy at MadLab. Only four people attended the event and the group has grown to over 700 members in those 4 years which is a great achievement.
+Of course there was also lots of cake to help celebrate the birthday!
 
-We decided to hold a more hands-on pratical meetup for this event and found what looked like an interesting birthday themed kata designed by Matteo Vaccari based on exploring the software design pattern known as Hexagonal Architecture or Ports & Adapters.
+## Java libraries you can't afford to miss
 
-This was my first experience of a hands-on session and I thought it was great. We had people working in pairs whilst Debbie Roycroft and I helped to ensure noone become stuck.
+In August we held our first event with a remote speaker. We had originally planned for [Andres Almiray](https://twitter.com/aalmiray) to visit us in Manchester and speak however due to unforeseen circumstances he was unable to travel but still offered to speak for us, albeit remotely. 
 
-There was also lots of cake!
+This was a great opportunity for us to explore the technicalities around hosting a remote speaker. It was a bit of an experiment but if it went well then it would open up the possibility for more remote speakers in the future. One of the hardest parts of running the MJC is attracting speakers.
 
-## June: Java 9
+Although we were stepping out of our comfort zone for this event it proved to be worth it. The event went smoothly, all the worries about connectivity and having the ability to communicate effectively with the Andres were unnecessary. The sound quality in the room we used for the meetup wasn't ideal but we learned a good lesson for future events to perform more thorough sound checks. 
 
-With the release on Java 9 on the horizon Debbie Roycroft spoke about some of the upcoming features that would be available.
+Most importantly though, Andres was a great speaker and shared some really useful content related to various key Java libraries for production and test use-cases. I'd recommend people reach out to him to speak at their events as I'm sure he'd be more than happy to speak either in person or remotely.
 
-The highlight of this for me was the intro to the module system aka Project Jigsaw. I'd heard quite a lot about it due its controversial nature howvere didn't really know much about how it worked. The idea of being able to create a lightweight Java runtime with just the libraries from the JDK that were necessary for the app was intriguing.
-
-## July: Java with Docker & Azure
-
-In July we were joined by Microsoft who provided us with an in depth overview of the Docker support available on Azure. While fairly light on Java content, this talk was really interesting in that we were shown lots of useful features available on Azure. It was brought to our attention that Microsoft contribute more to open-source software than any other organisation which was really surprising.
-
-## August: Java 9 Hackday
-
-The Java 9 hackday was a special event held on a Saturday afternoon. The hack was organised by the JCP and we joined up online with various JUGs from around the world.
-
-This session was really useful as it built upon the Java 9 meetup in June as we learned much about the module system and mor importantly by joining in with the hack we contributed to the delivery of Java 9 through the feedback we provided.
-
-## August: Java libraries you can't afford to miss
-
-In August we held our first event with a remote speaker. We had originally planned for Andres Almiray to visit us in Manchester and speak however due to unforseen circumstances he was unable to travel but still offered to speak albeit remotely. 
-
-This was an interesting opportunity for us to explore the technicalities around hosting a remote speaker that had the potential to open up the possibility for more remote speakers in the future.
-
-Although we were stepping out of our comfort zone for this it proved to be worth the extra stress. The event went smoothly, all the worries about connectivity and having the ability to communcate effectively with the speaker were unnecessary. The sound quality in the room we used for the meetup wasn't ideal but we leared a good lesson for future events from this. 
-
-Most importantly, Andres was a great speaker and shared some really useful content related to various key Java libraries. I'd recommend people reach out to him to speak at their events as I'm sure he'd be more than happy to speak either in person or remotely.
-
-The recording of this event is available on the MJC YouTube channel.
+The recording of this event is available on the [MJC YouTube channel](https://www.youtube.com/channel/UC1miBRxN26sOgX1KioPq3Qw).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HrqiTcr78aA" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-## November: Nikhil Nanivadekar
+## Nikhil Nanivadekar
 
-One of the highlights of the year for me was the visit of Nikhil Nanivadekar. I first met Nikhil at JCrete in 2016 and we have remained friends since. He visited Manchester in the summer of 2017 and I joked that he should visit again soon and speak at the MJC. A few months later and he was back as part of a tour that took him to London, Belfast, Dublin, Edinburgh, Manchester and Birmingham. You can read more abou this [here](link).
+At the end of November we had the pleasure of hosting [Nikhil Nanivadekar](https://twitter.com/nikhilnanivade), project lead for the [Eclispse Collections](https://www.eclipse.org/collections/) open-source project. Nikhil recently became a Java Champion and has spoken at many conferences including JavaOne. 
 
-Nikhil is the project lead for the [Eclispse Collections](https://www.eclipse.org/collections/) open-source project and he provided a very entertaining talk comparing Eclipse Collections with other collections libraries such as those available in the JDK, Guava, Apache Collections and Vavr. 
+I first met Nikhil at JCrete in 2016 and we have remained friends since. He visited Manchester in the summer of 2017 and I joked that he should visit again soon and speak at the MJC. A few months later and he was back as part of a [JUG tour](https://medium.com/@nikhilnanivadekar/november-java-user-group-tour-2017-dbb103b80532) that took him to London, Belfast, Dublin, Edinburgh, Manchester and Birmingham. 
 
-The passion for his work shone through during his talk which, when added to his unique sense of humour, made this the highlight of the year for me.
+He provided a very entertaining talk comparing Eclipse Collections with other collections libraries such as those available in the JDK, Guava, Apache Collections and Vavr. He covered off various factors such as performance, memory footprint and ease of use. The [video](https://www.youtube.com/watch?v=QwZF8xQHlxE&t=2s) of this talk from JavaOne is available where Nikhil presents with the co-authors of the talk.
+
+As well as this, Nikhil also managed to squeeze in a second talk describing the process involved in migrating Eclipse Collections to Java 9. 
+
+The passion for his work shone through during his talk which, when added to his unique sense of humour, made this the highlight of the year for me. 
+
+Don't forget to _star_ that [GitHub repo](https://github.com/eclipse/eclipse-collections)!
+
+# Final thoughts
+
+My involvement with the MJC over the last year has been amazing on many levels. 
+
+I've met great people from the local tech community as well speakers and other JUG leaders from  around the world. 
+
+I have no doubt that my involvement with the MJC has led to other great opportunities such as volunteering at [Devoxx UK](https://www.devoxx.co.uk/) and realising an ambition of mine to work for one of the leading digital companies in Manchester.
+
+Something I hadn't realised is how much time & effort goes into just making sure an event goes ahead. All the time that goes into finding venues and speakers ain't trivial.
+
+I'm really looking forward to what the coming year holds for the MJC. We are in discussions with some exciting speakers and also have some ambitious plans to run an unconference later this year. Hopefully our ambitions are realised.
