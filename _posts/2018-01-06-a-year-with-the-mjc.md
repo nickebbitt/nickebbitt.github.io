@@ -2,6 +2,7 @@
 layout: post
 title:  "A year with the Manchester Java Community"
 date:   2018-01-06 00:00:00
+summary: A review of my time with the MJC in 2017
 categories: java, jug, community
 comments: true
 ---
