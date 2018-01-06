@@ -47,7 +47,7 @@ The recording of this event is available on the [MJC YouTube channel](https://ww
 
 ## Nikhil Nanivadekar
 
-At the end of November we had the pleasure of hosting [Nikhil Nanivadekar](https://twitter.com/nikhilnanivade), project lead for the [Eclispse Collections](https://www.eclipse.org/collections/) open-source project. Nikhil recently became a Java Champion and has spoken at many conferences including JavaOne. 
+At the end of November we had the pleasure of hosting [Nikhil Nanivadekar](https://twitter.com/nikhilnanivade), project lead for the [Eclispse Collections](https://www.eclipse.org/collections/) open-source project. Nikhil recently became a Oracle Developer Champion and has spoken at many conferences including JavaOne. 
 
 I first met Nikhil at JCrete in 2016 and we have remained friends since. He visited Manchester in the summer of 2017 and I joked that he should visit again soon and speak at the MJC. A few months later and he was back as part of a [JUG tour](https://medium.com/@nikhilnanivadekar/november-java-user-group-tour-2017-dbb103b80532) that took him to London, Belfast, Dublin, Edinburgh, Manchester and Birmingham. 
 
