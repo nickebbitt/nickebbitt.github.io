@@ -17,7 +17,7 @@ Over the course of the year we held 10 events in total. Six of these were what I
 
 We hosted the events at a variety of great venues such as the event spaces at Auto Trader, Rental Cars, Coop (Federation House) and BJSS as well as a couple at our spiritual home of MadLab.
 
-I've met a real mix of people at the events over the year from students and Java developers just starting out in their tech career, to seasoned professionals. The one constant from pretty much everyone I've met is their passion for technology and Java in particular.
+I've met a real mix of people at the events over the year from students and Java developers just starting out in their tech career to seasoned professionals. The one constant from pretty much everyone I've met is their passion for technology and Java in particular.
 
 Out of all the events we ran this year, the following are those that really stood out for me. 
 
