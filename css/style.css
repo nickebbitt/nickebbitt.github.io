@@ -39,7 +39,7 @@ ul.listposts { margin: 0 auto; }
 ul.listposts li {line-height: 30px; }
 
 /* Post */
-.post, .contact, .about, .error, .swatches { width: 85%; margin: 0 auto; line-height: 26px; }
+.post, .contact, .about-site, .error, .swatches { width: 85%; margin: 0 auto; line-height: 26px; }
 .post h2.date, .swatch-log h2.date { font-size: 24.5px; font-weight: 300; font-style: italic; }
 
 /* Swatches */
@@ -55,16 +55,7 @@ ul.swatch li:first-child { webkit-border-top-left-radius: 9px; -webkit-border-bo
 .swatch-log p { font-size: 14px; clear: left; margin-top: 10px; font-family: 'Montserrat', Helvetica, sans-serif; text-transform: uppercase; }
 .clear { clear: both; height: 20px; }
 
-/* CV */
-.cv {line-height: 23px; width: 90%; margin: 0 auto;}
-.cv li { line-height: 23px; }
-.cv h2 { font-size: 26.5px; }
-.cv h1 { font-size: 32.5px; }
-.panel-heading {
-    cursor: pointer;
-}
-
-.posts, .contact, .about, .cv, .error, .swatches { margin-bottom: 30px; }
+.posts, .contact, .about, .error, .swatches { margin-bottom: 30px; }
 
 /* Contact */
 iframe {font-family: 'Merriweather', Georgia, Times; font-size: 16px;}
