@@ -12,7 +12,7 @@ The majority of the ideas, approaches, principles and values in here are things 
 
 This post is basically a dump of those thoughts.
 
-There's likely nothing new here - I've learnt all I know from the amazing people I've worked with, cosuming many books & videos (both software related and not), attending conferences and simply engaging with the many talented people in the various tech communities I'm involved with such as the Manchester Java Community. 
+There's likely nothing new here - I've learnt all I know from the amazing people I've worked with, consuming many books & videos (both software related and not), attending conferences and simply engaging with the many talented people in the various tech communities I'm involved with such as the Manchester Java Community. 
 
 Apologies if I've not referenced quotes or ideas where I should have - if so please let me know and I'll update the post.
 
