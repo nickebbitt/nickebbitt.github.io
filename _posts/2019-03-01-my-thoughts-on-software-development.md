@@ -8,7 +8,7 @@ comments: true
 
 Around the beginning of this year as I was transitioning between jobs I decided to start writing down my views on software development. 
 
-The majority of the ideas, approaches, principles and values in here are things I've learned about, experienced or simply developed an opinion about over the last 5-10 years.
+The majority of the ideas, approaches, principles and values in here are things I've learned about, experienced or simply formed an opinion on over the last 5 years or so.
 
 This post is basically a dump of those thoughts.
 
