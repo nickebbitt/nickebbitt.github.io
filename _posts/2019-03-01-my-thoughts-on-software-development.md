@@ -177,7 +177,7 @@ Waiting tasks are those that are dependent on an external party/process to the t
 
 > Blocking != Waiting
 
-Encourage individuals to feel responsibile for all tasks, not just the ones they are assigned to.
+Encourage individuals to feel responsible for all tasks, not just the ones they are assigned to.
 
 If a task is blocked, expect team to work together to unblock through knowledge sharing, pairing or mobbing.
 
