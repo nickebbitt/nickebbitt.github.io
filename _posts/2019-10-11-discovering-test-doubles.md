@@ -91,7 +91,7 @@ There are differing opinions of what a unit is but the one I adhere to and we'll
 
 > Although I start with the notion of the unit being a class, I often take a bunch of closely related classes and treat them as a single unit. 
 >
-> [Unit Test - Martin Fowler]( https://martinfowler.com/bliki/UnitTest.html)
+> [Unit Test - Martin Fowler](https://martinfowler.com/bliki/UnitTest.html)
 
 ## Collaborator
 
@@ -168,7 +168,7 @@ The simplest of all test doubles is the dummy (or dummy object).
 
 > Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists.
 >
-> [Mocks aren't Stubs - Martin Fowler](https://martinfowler.com/articles/mocksArentStubs.html)
+> [Mocks Aren't Stubs - Martin Fowler](https://martinfowler.com/articles/mocksArentStubs.html)
 
 Importantly, if a dummy was used in a test we would expect it to fail as this would be unexpected behaviour and we should be thinking about using another type of test double.
 
@@ -534,5 +534,11 @@ We'll also be more aware of the test-cases that genuinely benefit from using a m
 
 Regardless of whether you roll your own doubles, use a mocking framework or a apply a mixture of both I believe its really valuable to discuss and agree the approach and style as a team. The value of a codebase with a consistent and coherent style shouldn't be underestimated.
 
+# References
 
+* [xUnit Patterns](http://xunitpatterns.com/) - Gerard Mezaros
+* [Test Double](https://martinfowler.com/bliki/TestDouble.html) - Martin Fowler
+* [Unit Test](https://martinfowler.com/bliki/UnitTest.html) - Martin Fowler
+* [Mocks Aren't Stubs](https://martinfowler.com/articles/mocksArentStubs.html) - Martin Fowler
+* [The Little Mocker](https://8thlight.com/blog/uncle-bob/2014/05/14/TheLittleMocker.html) - Robert C. Martin
 
