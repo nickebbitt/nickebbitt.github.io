@@ -12,7 +12,7 @@ It's a bit of a long read but hopefully you find it useful and interesting. If y
 
 I'd love to hear any thoughts or experiences people have on this topic. Also any feedback on the content would be awesome. 
 
-I've got doubts about the code examples used and really struggled with the section on mocks but after lots of umming and ahing I've just decided to poublish it as is. The way I see it is that it's just a waste of my time if I keep it hidden away on personal computer, what's the worst that could happen :)
+I've got doubts about the code examples used and really struggled with the section on mocks but after lots of umming and ahing I've just decided to publish it as is. The way I see it is that it's just a waste of my time if I keep it hidden away on personal computer, what's the worst that could happen :)
 
 * Will be replaced with the ToC
 {:toc}
