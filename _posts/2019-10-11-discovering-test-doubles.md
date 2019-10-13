@@ -78,7 +78,7 @@ First, let's define some of the concepts we'll be exploring and the vocabulary w
 The system under test (SUT), or test subject, is...
 
 > short for "whatever thing we are testing" and is always defined from the perspective of the test.
-
+>
 > [Gerard Mezaros](http://xunitpatterns.com/SUT.html)
 
 ## Unit test
@@ -91,7 +91,7 @@ There are differing opinions of what a unit is but the one I adhere to and we'll
 
 > Although I start with the notion of the unit being a class, I often take a bunch of closely related classes and treat them as a single unit. 
 >
-> [Unit Test - Martin Fowler](https://martinfowler.com/bliki/UnitTest.html)
+> [Martin Fowler](https://martinfowler.com/bliki/UnitTest.html)
 
 ## Collaborator
 
@@ -99,7 +99,7 @@ Something that the test subject depends on, also known as a dependency. I will u
 
 > An individual class or a large-grained component on which the system under test (SUT) depends.
 >
-> [xUnit Test Patterns - Gerard Mezaros](http://xunitpatterns.com/DOC.html)
+> [Gerard Mezaros](http://xunitpatterns.com/DOC.html)
 
 ## Test double
 
@@ -168,7 +168,7 @@ The simplest of all test doubles is the dummy (or dummy object).
 
 > Dummy objects are passed around but never actually used. Usually they are just used to fill parameter lists.
 >
-> [Mocks Aren't Stubs - Martin Fowler](https://martinfowler.com/articles/mocksArentStubs.html)
+> [Martin Fowler](https://martinfowler.com/articles/mocksArentStubs.html)
 
 Importantly, if a dummy was used in a test we would expect it to fail as this would be unexpected behaviour and we should be thinking about using another type of test double.
 
