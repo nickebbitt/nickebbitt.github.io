@@ -9,7 +9,7 @@ comments: true
 * Will be replaced with the ToC
 {:toc}
 
-At Auto Trader UK we use use Jaeger as the tracing component within our Istio based service mesh running on GKE to collect & visualise HTTP request traces across the system.
+At Auto Trader UK we use Jaeger as the tracing component within our Istio based service mesh to collect & visualise HTTP request traces for the services running on our GKE based delivery platform.
 
 Tracing provides a lot of value for us when debugging problems and understanding the behaviour of services across the system.
 
