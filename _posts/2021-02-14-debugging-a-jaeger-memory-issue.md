@@ -9,13 +9,29 @@ comments: true
 * Will be replaced with the ToC
 {:toc}
 
-At Auto Trader UK we use Jaeger as the tracing component within our Istio based service mesh to collect & visualise HTTP request traces for the services running on our GKE based delivery platform.
+At [Auto Trader UK](https://careers.autotrader.co.uk/) we use [Jaeger](https://www.jaegertracing.io/) as the distributed tracing component within our [Istio](https://istio.io/latest/docs/concepts/what-is-istio/) based service mesh to collect & visualise HTTP request traces for the services we run on our [GKE](https://cloud.google.com/kubernetes-engine) based delivery platform.
 
-Tracing provides a lot of value for us when debugging problems and understanding the behaviour of services across the system.
+We have around 400 (micro)services running in production and [distributed tracing](https://microservices.io/patterns/observability/distributed-tracing.html) provides a lot of value for us when debugging problems and understanding behaviour of requests across the system.
+As mentioned previously, we also operate Istio on the cluster which is the source of request traces.
+Every HTTP request to a service running on the cluster is ingressed via NGINX and enters the service mesh and a trace for that request begins.
+A trace span is generated for every connection between the Istio side-car proxies (i.e. Envoy proxies) deployed alongside every service that are intercepting and handling HTTP based traffic across the cluster.
 
-Recently we experienced a problem with the Jaeger collectors sufffering from container restarts as they were consuming an unexpected amount of memory and being killed by the Kubernetes OOM killer.
+Jaeger consists of 3 core components:
 
-We were able to correlate the failures to the unavailability of the Jaeger storage backend (in our case, Elasticsearch). 
+* `agent` - listens for span sent over UDP, batches them and sends to the `collector`
+* `collector` - receives traces from `agents` and runs them through a processing pipeline. Ultimately the `collector` is responsible for storing traces in a backend data store, in our case Elasticsearch.
+* `query` - retrieves traces from storage to display in the UI
+
+There is also the front-end/UI which is used to visualises traces for end users.
+
+More details of Jaeger's architecture is available in their [docs](https://www.jaegertracing.io/docs/1.21/architecture/).
+
+## The problem
+
+With this context let's describe the problem we have been experiencing with the Jaeger collectors.  sufffering from container restarts as they were consuming an unexpected amount of memory and being killed by the Kubernetes OOM killer.
+
+We were able to correlate the container restarts to the unavailability of Jaeger's storage backend i.e. Elasticsearch.
+We discovered that during an Elasticsearch upgrade we were experiencing a period of down time
 
 Initial analysis of the problem showed the `collector` queues filling up which was as expected due the unavailability of the backend. 
 
@@ -26,13 +42,7 @@ This was surprising as we had configured the Jaeger collector to have a maximum 
 In theory, the max queue size setting should constrain the queue and the amount of memory it consumed. This, combined with the overall memory request of 200mb, should provide ample space for the the collector to be resilient to any scenario that could cause the queue to fill up (for example, the storage backend being unavailable or maybe an unexpected/unplanned increase in load i.e. traces per second).
 
 
-# The Problem
 
-- Architecture overview
-  - Jaeger
-    - collector
-    - query
-  - Elastic as the backend for storing traces and spans
 - Jaeger config, queue size based on allowed memory usage
 - ES connectivity issue
 - container restarts due to K8s OOM killer
