@@ -36,9 +36,9 @@ The unavailability of Elasticsearch meant that the `collector` was unable to sen
 
 This, in theory, shouldn't be a problem.
 
-The `collector` is designed to handle the unavailability of the storage backend using an internal queue that buffers trace events when it is unable to store them. If the queue fills up then the `collector` will drop the oldest trace events and should continue working in this way until it is able to send trace events again.
+The `collector` is designed to handle the unavailability of the storage backend using an internal bounded queue that buffers trace spans when it is unable to store them. If the queue fills up then the `collector` will drop the oldest trace spans and should continue working in this way until it is able to store trace spans again.
 
-Under normal conditions we expect the `collector`'s queue to near empty at all times. This shows us that we are able to save trace events to storage at a rate that keeps up with the volume being generated across the system.
+Under normal conditions we expect the `collector`'s queue to be near empty at all times. This shows us that we are able to store trace spans at a rate that keeps up with the volume being generated across the system.
 
 There are a couple configuration options that can be used to control the size of the `collector`'s queue:
 
@@ -58,7 +58,17 @@ This, combined with the overall memory request of `200mb`, should provide ample 
 
 ## Investigation & understanding
 
+The first step when investigating any issue is to try to recreate it.
+This can often be easier said than done.
+
+The reality is that it took a few attempts seperated by a number of nights sleep to fully understand what was actually happening when the `collector` was unable to store trace spans due to Elasticsearch being unavailable.
+
+At Auto Trader we deploy the Delivery Platform to a `testing` cluster on GKE which is an exact replica of `production` from a platform perspective (i.e. not including the product related services).
+This made it relatively straighforward simulate the issue in a non-production environment
+
 - recreating the problem in a controlled environment
+- jaeger collector idle memory usage, 18mb
+- using Go porfile tools to visualise the heap
 - queue
 - understanding the memory usage in more detail
 - Go heap profiling
