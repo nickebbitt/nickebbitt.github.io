@@ -54,14 +54,14 @@ We expected that when the `collector` queue filled up then memory usage would be
 What actually happened was that before we were able to observe the queue being full and trace spans being dropped the OOM killer would have already done its job.
 
 In theory, the max queue size setting of `80mb` should constrain the queue and the amount of memory it consumed.
-This, combined with the overall memory request of `200mb`, should provide ample space for the the collector to be resilient to any scenario that could cause the queue to fill up with extra space for the general overheads of the `collector` process.
+This, combined with the overall memory request of `200mb`, should provide ample space for the the collector to be resilient to any scenario that could cause the queue to fill up with memory to spare for the general overheads of the `collector` process.
 
 ## Investigation & understanding
 
 The first step when investigating any issue is to try to recreate it.
 This can often be easier said than done.
 
-The reality is that it took a few attempts seperated by a number of nights sleep to fully understand what was actually happening when the `collector` was unable to store trace spans due to Elasticsearch being unavailable.
+The reality is that it took several attempts seperated by a number of nights sleep to fully understand what was actually happening when the `collector` was unable to store trace spans due to Elasticsearch being unavailable.
 
 At Auto Trader we deploy the Delivery Platform to a `testing` cluster on GKE which is an exact replica of `production` from a platform perspective (i.e. not including the product related services).
 This made it relatively straighforward simulate the issue in a non-production environment
