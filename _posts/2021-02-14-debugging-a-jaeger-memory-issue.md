@@ -21,7 +21,9 @@ At a high level, Jaeger consists of 4 main components:
 * `query` - retrieves traces from storage to display in the frontend/UI
 * frontend/UI - used to query and visualise traces for end users
 
-More details of Jaeger's architecture is available in their [docs](https://www.jaegertracing.io/docs/1.21/architecture/).
+![Jaeger Architecture](/assets/jaeger-memory-debug/jaeger-architecture-v1.png){:class="img-responsive"}
+
+The above diagram is from the [Jaeger docs](https://www.jaegertracing.io/docs/1.21/architecture/) where you can find more detail related to its architecture.
 
 ## The problem
 
@@ -34,11 +36,16 @@ We were able to correlate the restarts to the unavailability of Elasticsearch th
 We discovered that during an Elasticsearch upgrade we were experiencing some unexpected down time.
 The unavailability of Elasticsearch meant that the `collector` was unable to send its trace events to the storgae backend.
 
-This, in theory, shouldn't be a problem.
+This, in theory, shouldn't be a problem for the `collector`.
 
 The `collector` is designed to handle the unavailability of the storage backend using an internal bounded queue that buffers trace spans when it is unable to store them. If the queue fills up then the `collector` will drop the oldest trace spans and should continue working in this way until it is able to store trace spans again.
 
 Under normal conditions we expect the `collector`'s queue to be near empty at all times. This shows us that we are able to store trace spans at a rate that keeps up with the volume being generated across the system.
+
+With our set up, the `collector` utilises around 10% of the available 200mb request when it is managing its queue effectively.
+
+![Normal Memory](/assets/jaeger-memory-debug/memory-normal.png){:class="img-responsive"}
+
 
 There are a couple configuration options that can be used to control the size of the `collector`'s queue:
 
@@ -63,15 +70,13 @@ This can often be easier said than done.
 
 The reality is that it took several attempts seperated by a number of nights sleep to fully understand what was actually happening when the `collector` was unable to store trace spans due to Elasticsearch being unavailable.
 
-At Auto Trader we deploy the Delivery Platform to a `testing` cluster on GKE which is an exact replica of `production` from a platform perspective (i.e. not including the product related services).
-This made it relatively straighforward simulate the issue in a non-production environment
+At Auto Trader we deploy the Delivery Platform to a `testing` cluster on GKE which is an exact replica of `production` from a platform perspective i.e. only the product related workloads differ, the infrastructure and platform services are equivalent.
+This made it relatively straighforward simulate the issue in a non-production environment as Jaeger was already deployed there.
+All I needed to do was simulate some load to generate a reasonable volume of trace spans across the system and then break connectivity with Elasticsearch to cause the `collector` queue to fill up.
 
 - recreating the problem in a controlled environment
 - jaeger collector idle memory usage, 18mb
 - using Go porfile tools to visualise the heap
-- queue
-- understanding the memory usage in more detail
-- Go heap profiling
 
 # Solution
 
