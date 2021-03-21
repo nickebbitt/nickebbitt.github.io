@@ -99,27 +99,43 @@ I used [Apache JMeter](https://jmeter.apache.org/) to generate the load and conf
 
 ### Key metrics
 
-The total volumes of trace spans is small compared to normal production the volumes which peak at around ???. In testing we run fewer replicas so this allowed me to simulate it in relative terms.
+The total volume of trace spans is small compared to normal production volumes which peak at around ???. In testing we run fewer replicas so this allowed me to simulate it in relative terms.
 
-When Jaeger is working/performing as expected the `collector` queue length should consistently remain at around zero i.e. as trace spans are ingested they are processed and stored in the Elasticsearch backend at the same rate.
+With the simulated test load the `collector` queue length remains at around zero as expected i.e. as trace spans are ingested they are processed and stored in the Elasticsearch backend at the same rate.
 
 ![Jaeger Normal Queue Length](/assets/jaeger-memory-debug/jaeger-normal-queue-length.png){:class="img-responsive"}
 
-We should also not be dropping or rejecting any spans.
+We can also observe that we are not be dropping or rejecting any spans.
 
 ![Jaeger Normal Span Drop](/assets/jaeger-memory-debug/jaeger-normal-span-drop.png){:class="img-responsive"}
 
-When connectivity to the backend is broken
+However, if we break connectivity to the Elasticsearch (the storage backend) then the queue starts to fill but before we are able to observe spans being dropped the `collector` container is restarted by the OOM killer.
 
-- which metrics helped/are interesting?
-- using Go profile tools to visualise the heap
+------- MEMORY GRAPH -------
+
+------- kubectl events -------
+
+Out of curiosity at this point I decided to explore whether I could observe how the `collector` was actually consuming memory. As it is a GoLang process it supports the use of the pprof tool to take a heap dump and visualise where the memory was allocated.
+
+-------- collector process heap dump ---------
+
+All the above evidence point towards items on the `collector` queue consuming more memory than the suggested maximum limit specified in the configuration.
+
+Having successfully recreated the issue in a controlled environment this allowed me to experiment with potential solutions.
 
 ## Solution
 
-- Right sizing the memory request for Jaeger collector to ensure enough space for queue to grow to accomodate traces/spans including the additional space they require when queued
-- link to Jaeger issue: <https://github.com/jaegertracing/jaeger/issues/2715>
+With a better understanding that the memory use of queue was not being limited as we expected it would, this allowed me to experiment with the `collector` configuration to find the settings that would allow us to run the process in a predictable & resilient way.
 
-See https://github.atcloud.io/AutoTrader/helm-platform-jaeger/commit/766fab7335a757e031e28514de8a387175ec0422
+The first idea I had in mind was to vertically scale the memory available to the `collector` process to understand the total memory required to run the process with our current max queue setting of `80mb`.
+
+Following a few iterations of increasing the memory request for the `collector` pod I found that a full queue actually requires `~750mb` memory.
+
+It should be noted that the queue size will depend on the nature of the trace spans that are collected across your services. Currently all our trace spans come from Istio and they are therefore fairly consistent is size and structure.
+
+Rather than scale up each replica we decided to adjust the max queue setting to a size that fits within our existing memory request of `200mb`. The sweet spot for this was a max queue size of `15mb`.
+
+The trade-off on this decision being a cost saving on the total resources we need to run the Jaeger `collector` pods against the fact that if we experience any issues causing the queue to fill up then we'll start dropping trace spans much sooner.
 
 Now when connectivity to the backend is broken we can see the `collector`'s queue fill up.
 
@@ -129,6 +145,11 @@ When it reached capacity we start to see spans being dropped, rather than the `c
 
 ![Jaeger Fixed Span Drop](/assets/jaeger-memory-debug/jaeger-fixed-span-drop.png){:class="img-responsive"}
 
+Following this investigation we raised [an issue](https://github.com/jaegertracing/jaeger/issues/2715) with the Jaeger project which they will hopefully look to investigate further and resolve.
+
+See https://github.atcloud.io/AutoTrader/helm-platform-jaeger/commit/766fab7335a757e031e28514de8a387175ec0422
+
 ## References
 
-- https://carlosbecker.com/posts/jekyll-reading-time-without-plugins/
+* Distributed tracing - <https://microservices.io/patterns/observability/distributed-tracing.html>
+* Jaeger architecture - <https://www.jaegertracing.io/docs/1.21/architecture/>
