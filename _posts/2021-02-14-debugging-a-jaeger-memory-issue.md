@@ -118,7 +118,7 @@ I used [Apache JMeter](https://jmeter.apache.org/) to generate the load and conf
 The total volume of trace spans is small compared to normal production volumes which peak at around 45,000 ops/s.
 In testing we run significantly fewer replicas though so this allowed me to simulate it in relative terms.
 
-With the simulated test load the `collector` queue length remains at around zero as expected i.e. as trace spans are ingested they are processed and stored in the Elasticsearch backend at the same rate.
+With the test load the `collector` queue length remains at around zero as expected i.e. as trace spans are ingested they are processed and stored in the Elasticsearch backend at the same rate.
 
 ![Jaeger Normal Queue Length](/assets/jaeger-memory-debug/jaeger-normal-queue-length.png){:class="img-responsive"}
 
