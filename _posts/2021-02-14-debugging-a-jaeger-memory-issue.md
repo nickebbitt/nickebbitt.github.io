@@ -105,9 +105,9 @@ At Auto Trader we deploy the Delivery Platform to a `testing` cluster on GKE whi
 
 We also deploy some test services to all environments that serve the purpose of continually verifying that our Istio deployment is behaving as expected by simulating the behaviours we depend on, for example, distributed tracing via Jaeger.
 
-This made it relatively straighforward generate the issue in a non-production environment as Jaeger was already deployed along with the test services.
+This made it relatively straighforward simulate the issue in a non-production environment as Jaeger was already deployed along with the test services.
 
-All I needed to do was simulate some load to generate a reasonable volume of trace spans across the system and then break connectivity with Elasticsearch to cause the `collector` queue to fill up.
+All I needed to do was generate some load that would produce a reasonable volume of trace spans across the system and then break connectivity with Elasticsearch to cause the `collector` queue to fill up.
 
 I used [Apache JMeter](https://jmeter.apache.org/) to generate the load and configured it to send HTTP requests to the Istio test service at a rate of ~150 requests per second. This translates into approximately 1,300 ops per seconds (i.e. trace spans) being ingested by Jaeger.
 
