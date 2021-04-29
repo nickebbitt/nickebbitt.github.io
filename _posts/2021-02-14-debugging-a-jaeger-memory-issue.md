@@ -50,12 +50,12 @@ jaeger-collector-6fdf6bf6bb-qp84z   0/1     CrashLoopBackOff   5          111m
 >
 > You can find a detailed explanation of how resources are managed on Kubernetes in the [docs](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits).
 
-We were also able to observe the problem with a simple Prometheus query based on the `kube_pod_container_status_terminated_reason` metric.
+This was confirmed further using a simple Prometheus query based on the `kube_pod_container_status_terminated_reason` metric.
 
 ![Jaeger Prometheus OOMKilled](/assets/jaeger-memory-debug/jaeger-prometheus-oomkilled.png){:class="img-responsive"}
 
-We were able to correlate the restarts to the unavailability of Elasticsearch, Jaeger's `storage` backend.
-We discovered that during an Elasticsearch upgrade we were experiencing some unexpected down time.
+Around the same time we'd been performing some Elasticsearch (Jaeger's `storage` backend) upgrades and this gave us a correrlation point that warranted further investigation.
+We discovered that during an Elasticsearch upgrade we were experiencing some unplanned downtime.
 The unavailability of Elasticsearch meant that the `collector` was unable to send its trace events to the storgae backend.
 
 In theory, this shouldn't be a problem for the `collector`.
