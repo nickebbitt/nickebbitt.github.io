@@ -12,7 +12,7 @@ We have around 400 services running in production and [distributed tracing](http
 
 At a high level, Jaeger consists of the following components:
 
-* `agent` - listens for span sent over UDP, batches them and sends to the `collector`
+* `agent` - listens for spans sent over UDP, batches them and sends to the `collector`
 * `collector` - receives traces from `agents` and runs them through a processing pipeline. Ultimately the `collector` is responsible for storing traces in a backend data store, in our case [Elasticsearch](https://www.elastic.co/elasticsearch/)
 * `query` - retrieves traces from storage to display in the frontend/UI
 * `frontend`/UI - used to query and visualise traces for end users
