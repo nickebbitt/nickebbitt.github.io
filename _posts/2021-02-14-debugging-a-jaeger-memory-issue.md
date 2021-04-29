@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Debugging a Jaeger memory issue"
-date:   2021-02-14 00:00:00
+date:   2021-04-29 00:00:00
 categories: jaeger, tracing, debugging
 comments: true
 ---
