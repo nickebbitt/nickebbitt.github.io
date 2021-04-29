@@ -15,7 +15,7 @@ At a high level, Jaeger consists of the following components:
 * `agent` - listens for spans sent over UDP, batches them and sends to the `collector`
 * `collector` - receives traces from `agents` and runs them through a processing pipeline. Ultimately the `collector` is responsible for storing traces in some form of backend `storage`.
 * `query` - retrieves traces from storage to display in the frontend/UI
-* `frontend`/UI - used to query and visualise traces for end users
+* `frontend` (UI) - used to query and visualise traces for end users
 * `storage` - pluggable storage component in which the `collector` will persist spans, in our case [Elasticsearch](https://www.elastic.co/elasticsearch/)
 
 The following diagram illustrates the flow of trace spans through Jaeger.
