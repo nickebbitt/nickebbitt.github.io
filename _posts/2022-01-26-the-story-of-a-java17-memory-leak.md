@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The story of a Java 17 native memory leak"
-date:   2022-01-17 00:00:00
+date:   2022-01-26 00:00:00
 categories: memory, jvm, debugging
 comments: true
 ---
