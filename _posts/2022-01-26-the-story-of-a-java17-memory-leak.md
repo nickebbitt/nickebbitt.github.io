@@ -188,7 +188,7 @@ This approach allowed us to visualise the Native Memory Tracking data and import
 
 The memory area that stood out was `String Deduplication`.
 
-To validate whether this was the cause they disabled `String Deduplication` for the service and observed again.
+To validate whether this was the cause they explicitly disabled String Deduplication (`-XX:-UseStringDeduplication`) for the service and observed again.
 
 No leak!
 
