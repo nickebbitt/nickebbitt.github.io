@@ -8,7 +8,7 @@ comments: true
 
 ## Context
 
-When Java 17 was released in September we (i.e. the platform team at [Auto Trader](https://careers.autotrader.co.uk)) were fairly quick to provide a new Docker base image to allow our developers to gain the benefits of the new goodness in the JDK available since Java 11, the previous LTS version.
+When Java 17 was released in September we (the platform team at [Auto Trader](https://careers.autotrader.co.uk)) were fairly quick to provide a new Docker base image to allow our developers to gain the benefits of the new goodness in the JDK available since Java 11, the previous LTS version.
 
 Over the course of a few years we've standardised the way the JVM is configured out of the box for any new applications that make use of the base image.
 In general, this provides product teams with a good default starting point from which to get up & running quickly with any new service they plan to deploy.
