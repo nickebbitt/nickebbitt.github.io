@@ -175,4 +175,4 @@ I truly believe though that if you put focus on growing others it's at this poin
 
 ![grow-yourself](/assets/grow-yourself-through-communities/grow-yourself.png){:class="img-responsive"}
 
-So to summarise, I truly believe (and have first-hand experience) that if you get involved in communities you will grow yourself both personally and professionally.
+So to summarise, through being involed with communities of different kinds and at different levels of engagement you will grow yourself both personally and professionally in a variety of ways.
