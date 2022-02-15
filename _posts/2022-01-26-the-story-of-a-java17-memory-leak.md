@@ -184,7 +184,7 @@ _In the past I've wondered why Native Memory Tracking data are not exposed via J
 He didn't but suggested maybe it just hadn't been worked on yet.
 I did a bit of digging and found [this issue](https://bugs.openjdk.java.net/browse/JDK-8182634) in the OpenJDK bug tracker which suggest that is the case._
 
-This approach allowed us to visualise the Native Memory Tracking data and importantly leave it running long enough to see if any specific memory areas were growing disproportionately comapred to others.
+This approach allowed us to visualise the Native Memory Tracking data and importantly leave it running long enough to see if any specific memory areas were growing disproportionately compared to others.
 
 The memory area that stood out was `String Deduplication`.
 
