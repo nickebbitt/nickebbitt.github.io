@@ -66,7 +66,7 @@ However, the fact that the visibility of the leak was slow to manifest meant tha
 
 Having originally made little progress using Native Memory Tracking, one of our engineers decided to take another look.
 
-To work around the challenge of the leak being so slow to manifest and the awkwardness of using `jcmd` on a live deployment they decided to externalise the Native Memory Tracking data via a set custom Prometetheus metrics.
+To work around the challenge of the leak being so slow to manifest and the awkwardness of using `jcmd` on a live deployment they decided to externalise the Native Memory Tracking data via a set custom Prometheus metrics.
 This was achieved by executing JVM diagnostic commands (the equivalent of those used with `jcmd` from the command line) via Java code using the [ManagementFactory](https://docs.oracle.com/en/java/javase/17/docs/api/java.management/java/lang/management/ManagementFactory.html) capability.
 
 Here's a snippet of the kind of thing they got working...
