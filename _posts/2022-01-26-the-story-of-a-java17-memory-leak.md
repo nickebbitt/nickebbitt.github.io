@@ -180,7 +180,7 @@ Total: reserved=1530885KB, committed=1079713KB
 
 The output was then parsed and transformed into the correct metric format for Prometheus and exposed via a metrics endpoint on the service.
 
-_In the past I've wondered why Native Memory Tracking information is exposed via JMX beans similarly to how heap/non-heap memory usage is, this issue made me consider this again so I reached out to [Aleksey Shipilëv](https://twitter.com/shipilev) to see if he knew.
+_In the past I've wondered why Native Memory Tracking data are not exposed via JMX beans similarly to how heap/non-heap memory usage is, this issue made me consider this again so I reached out to [Aleksey Shipilëv](https://twitter.com/shipilev) to see if he knew.
 He didn't but suggested maybe it just hadn't been worked on yet.
 I did a bit of digging and found [this issue](https://bugs.openjdk.java.net/browse/JDK-8182634) in the OpenJDK bug tracker which suggest that is the case._
 
